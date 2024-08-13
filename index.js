@@ -6,7 +6,7 @@ const colorNamer = require('color-namer');
 const app = express();
 
 // Definir el puerto en el que el servidor escuchará
-const port = process.env.PORT || 4259;
+
 
 // Mapa de traducción de nombres de colores al español
 const colorTranslations = {
@@ -64,7 +64,4 @@ app.get('/colors', (req, res) => {
       color:  `${colorNameInSpanish}`});
 });
 
-// Iniciar el servidor
-app.listen(port, () => {
-    console.log(`Api encendida.`);
-});
+
