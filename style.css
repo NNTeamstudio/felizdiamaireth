@@ -29,9 +29,24 @@ h1 {
     text-align: center;
     font-size: 60px;
     margin-bottom: 50px;
-    color: #444;
+     background: linear-gradient(270deg, #ff4d6d, #892cbe, #ff7f50, #ff69b4, #ff1493);
+    background-size: 1200% 1200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: moveColors 5s ease-in-out infinite;
 }
 
+ @keyframes moveColors {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 .contenedor {
     width: 400px;
 }
@@ -156,7 +171,7 @@ h1 {
 
 .abierto .corazon {
     transform: rotate(90deg);
-    transition-delay: 0.4s;
+    transition-delay: 0.3s;
 }
 
 .carta.mostrar-carta {
@@ -219,9 +234,3 @@ h1 {
     }
 
 }
-
-
-
-
-
-
